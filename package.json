@@ -4,7 +4,7 @@
   "description": "For debugging / demo purposes only",
   "main": "sp_test.js",
   "dependencies": {
-    "serialport": "^4.0.3"
+    "serialport": "5.0.0-beta1"
   },
   "devDependencies": {},
   "scripts": {

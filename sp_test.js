@@ -9,6 +9,13 @@ let sp = new SerialPort("COM5", {
 	console.log("Port opened", error);
     // When using v4.x there seems to be no problem, but with 5.0.0-beta1
     // if data is received the following output will appear (and 'data' callback does not fire):
+    // -- Output --
+    // Port opened null
+    // Will close port in 10 seconds
+    // undefined:0
+    // 
+    // 
+    // 
     // TypeError: undefined is not a function
 
     let delay = 10;
