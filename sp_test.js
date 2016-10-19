@@ -52,7 +52,31 @@ let sp = new SerialPort("COM5", {
 });
 
 // Tried binding handler early (before open callback) but get same result
+/*
 sp.on('data', (data) => {
     // Never gets here
     console.log("[Rx2]: " + JSON.stringify(data));		
 });
+*/
+
+// Tried listening to all events listed in docs...still nothing improved/different -- these never fire
+sp.on('data', (data) => {
+    console.log("[data]: " + JSON.stringify(data));
+});
+
+sp.on('open', (data) => {
+    console.log("[open]: " + JSON.stringify(data));
+});
+
+sp.on('error', (data) => {
+    console.log("[error]: " + JSON.stringify(data));
+});
+
+sp.on('disconnect', (data) => {
+    console.log("[disconnect]: " + JSON.stringify(data));
+});
+
+sp.on('close', (data) => {
+    console.log("[close]: " + JSON.stringify(data));
+});
+
