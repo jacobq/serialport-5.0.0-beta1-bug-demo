@@ -1,0 +1,15 @@
+{
+  "name": "serialport-test",
+  "version": "0.0.1",
+  "description": "For debugging / demo purposes only",
+  "main": "sp_test.js",
+  "dependencies": {
+    "serialport": "^4.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jacob Quant <jacobq@gmail.com>",
+  "license": "MIT"
+}
