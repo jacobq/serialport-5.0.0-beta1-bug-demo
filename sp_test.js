@@ -1,7 +1,7 @@
 const SerialPort = require('serialport');
 
 let sp = new SerialPort("COM5", {
-	baudRate: 921600,
+	baudRate: 115200,   // Tried using different baud rate (adjusted other side too) but got same result
 	dataBits: 8,
 	stopBits: 1,
 	parity: "none"
@@ -49,4 +49,10 @@ let sp = new SerialPort("COM5", {
 		});
 	});
     */
+});
+
+// Tried binding handler early (before open callback) but get same result
+sp.on('data', (data) => {
+    // Never gets here
+    console.log("[Rx2]: " + JSON.stringify(data));		
 });
